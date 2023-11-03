@@ -12,6 +12,7 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index-styles.css">
 </head>
 <body>
 <input type="hidden" id="status" value="<%=request.getAttribute("status")%>">
@@ -20,7 +21,8 @@
 
 		<!-- Sign in  Form -->
 		<section class="sign-in">
-			<div class="container">
+			<div class="container m-5 d-flex align-items-center flex-column">
+				<h1 class="masthead-heading text-uppercase mb-0">Welcome To CommuniDrive</h1>
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
@@ -31,7 +33,7 @@
 					</div>
 
 					<div class="signin-form">
-						<h2 class="form-title">Sign up</h2>
+						<h2 class="form-title">Log In</h2>
 						<form method="post" action="login" class="register-form"
 							id="login-form">
 							<div class="form-group">

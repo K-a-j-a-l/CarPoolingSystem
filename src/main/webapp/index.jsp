@@ -11,7 +11,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Freelancer - Start Bootstrap Theme</title>
+<title>Car Pool</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
@@ -32,7 +32,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Unique Developer</a>
+			<a class="navbar-brand" href="#page-top">Welcome, <%=session.getAttribute("name") %></a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -42,17 +42,16 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto">
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout</a></li>
-					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout"><%=session.getAttribute("name") %>></a></li>
-		
+					<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="search.jsp">Search a Ride</a></li>
+					<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="offer.jsp">Offer a ride</a></li>
+					<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="history.jsp">History</a></li>
+					<li class="nav-item mx-0 mx-lg-1">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="settings.jsp">Settings</a></li>
+					<li class="nav-item mx-0 mx-lg-1 bg-danger">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout</a></li>
 				</ul>
 			</div>
 		</div>
@@ -61,10 +60,10 @@
 	<header class="masthead bg-primary text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
-			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
+			<img class="masthead-avatar mb-5" src="assets/img/avatar.jpg"
 				alt="..." />
 			<!-- Masthead Heading-->
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome To Unique Developer</h1>
+			<h1 class="masthead-heading text-uppercase mb-0">Welcome To CommuniDrive</h1>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>
@@ -74,16 +73,15 @@
 				<div class="divider-custom-line"></div>
 			</div>
 			<!-- Masthead Subheading-->
-			<p class="masthead-subheading font-weight-light mb-0">Java
-				Development - Web Development - Python</p>
+			<p class="masthead-subheading font-weight-light mb-0">Here we believe in the power of sharing rides to transform transportation. Our mission is to create a sustainable and interconnected community by facilitating convenient, cost-effective, and eco-friendly travel options for everyone.</p>
 		</div>
 	</header>
-	<!-- Portfolio Section-->
-	<section class="page-section portfolio" id="portfolio">
+
+	<section class="page-section">
 		<div class="container">
-			<!-- Portfolio Section Heading-->
+			<!-- Search Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">Search a Ride</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -92,107 +90,66 @@
 				</div>
 				<div class="divider-custom-line"></div>
 			</div>
-			<!-- Portfolio Grid Items-->
 			<div class="row justify-content-center">
-				<!-- Portfolio Item 1-->
-				<div class="col-md-6 col-lg-4 mb-5">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal1">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cabin.png"
-							alt="..." />
-					</div>
+				<div class="col-md-4 col-lg-2 mb-5">
+					<img src="assets/img/icon1.png" class=icon>
 				</div>
-				<!-- Portfolio Item 2-->
-				<div class="col-md-6 col-lg-4 mb-5">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal2">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cake.png"
-							alt="..." />
-					</div>
+				<div class="col-md-8 col-lg-6 mb-5">
+					<h3>For any budget</h3>
+					<p>From bikes and cars, you can find a ride in your budget at your convenience any time./p>
 				</div>
-				<!-- Portfolio Item 3-->
-				<div class="col-md-6 col-lg-4 mb-5">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal3">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/circus.png"
-							alt="..." />
-					</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-lg-2 mb-5">
+					<img src="assets/img/icon2.png" class=icon>
 				</div>
-				<!-- Portfolio Item 4-->
-				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal4">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/game.png"
-							alt="..." />
-					</div>
-				</div>
-				<!-- Portfolio Item 5-->
-				<div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal5">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/safe.png"
-							alt="..." />
-					</div>
-				</div>
-				<!-- Portfolio Item 6-->
-				<div class="col-md-6 col-lg-4">
-					<div class="portfolio-item mx-auto" data-bs-toggle="modal"
-						data-bs-target="#portfolioModal6">
-						<div
-							class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-							<div
-								class="portfolio-item-caption-content text-center text-white">
-								<i class="fas fa-plus fa-3x"></i>
-							</div>
-						</div>
-						<img class="img-fluid" src="assets/img/portfolio/submarine.png"
-							alt="..." />
-					</div>
+				<div class="col-md-8 col-lg-6 mb-5">
+					<h3>For any distance</h3>
+					<p>Book rides within the city, outside a city any time</p>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section class="page-section">
+		<div class="container">
+			<!-- Offer Section Heading-->
+			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Offer a Ride</h2>
+			<!-- Icon Divider-->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="divider-custom-line"></div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-lg-2 mb-5">
+					<img src="assets/img/icon3.jpeg" class=icon>
+				</div>
+				<div class="col-md-8 col-lg-6 mb-5">
+					<h3>Reduce the Cost</h3>
+					<p>You can reduce the expense of a journey by offering a ride to another./p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-lg-2 mb-5">
+					<img src="assets/img/icon4.jpg" class=icon>
+				</div>
+				<div class="col-md-8 col-lg-6 mb-5">
+					<h3>Reduce Pollution</h3>
+					<p>By sharing, you can help to reduce the pollution by the vehicles.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
 	<!-- About Section-->
 	<section class="page-section bg-primary text-white mb-0" id="about">
 		<div class="container">
 			<!-- About Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-white">About</h2>
+				class="page-section-heading text-center text-uppercase text-white">About Us</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>
@@ -203,24 +160,12 @@
 			</div>
 			<!-- About Section Content-->
 			<div class="row">
-				<div class="col-lg-4 ms-auto">
-					<p class="lead">Freelancer is a free bootstrap theme created by
-						Start Bootstrap. The download includes the complete source files
-						including HTML, CSS, and JavaScript as well as optional SASS
-						stylesheets for easy customization.</p>
+				<div class="ms-auto">
+					<p class="lead">At CommuniDrive, we envision a world where every journey contributes to a cleaner environment and stronger communities. By connecting drivers and passengers, we're committed to reducing traffic congestion, cutting down on carbon emissions, and fostering meaningful connections along the way.</p>
+					<p class="lead">Your safety and comfort are our top priorities. Our platform is designed with state-of-the-art security measures, user-friendly interfaces, and responsive support to ensure a seamless and secure experience for all users.</p1>
+					<p class="lead">With thousands of successful rides shared, CommuniDrive is more than just a platform, it's a community. Join us in creating a network of individuals committed to making a positive impact on the world through shared travel experiences.</p>
+					<p class="lead">We leverage cutting-edge technology to create the best experience for our users. Our smart matching system ensures efficient and reliable rides, while secure transactions and real-time communication make your journey stress-free.</p>
 				</div>
-				<div class="col-lg-4 me-auto">
-					<p class="lead">You can create your own custom avatar for the
-						masthead, change the icon in the dividers, and add your email
-						address to the contact form to make it fully functional!</p>
-				</div>
-			</div>
-			<!-- About Section Button-->
-			<div class="text-center mt-4">
-				<a class="btn btn-xl btn-outline-light"
-					href="https://startbootstrap.com/theme/freelancer/"> <i
-					class="fas fa-download me-2"></i> Free Download!
-				</a>
 			</div>
 		</div>
 	</section>
@@ -230,7 +175,7 @@
 			<!-- Contact Section Heading-->
 			<h2
 				class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact
-				Me</h2>
+				Us</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -242,13 +187,6 @@
 			<!-- Contact Section Form-->
 			<div class="row justify-content-center">
 				<div class="col-lg-8 col-xl-7">
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- * * SB Forms Contact Form * *-->
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- This form is pre-integrated with SB Forms.-->
-					<!-- To make this form functional, sign up at-->
-					<!-- https://startbootstrap.com/solution/contact-forms-->
-					<!-- to get an API token!-->
 					<form id="contactForm" data-sb-form-api-token="API_TOKEN">
 						<!-- Name input-->
 						<div class="form-floating mb-3">
