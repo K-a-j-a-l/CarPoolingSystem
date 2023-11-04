@@ -1,8 +1,3 @@
-<%
-	if(session.getAttribute("name")==null){
-		response.sendRedirect("login.jsp");
-	}
-%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +27,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Welcome, <%=session.getAttribute("name") %></a>
+			<a class="navbar-brand" href="#page-top">CommuniDrive</a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -43,15 +38,15 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="search.jsp">Search a Ride</a></li>
+					<a class="nav-link active py-3 px-0 px-lg-3 rounded" href="index.jsp">Home</a></li>
 					<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="offer.jsp">Offer a ride</a></li>
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Us</a></li>
 					<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="history.jsp">History</a></li>
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact Us</a></li>
 					<li class="nav-item mx-0 mx-lg-1">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="settings.jsp">Settings</a></li>
-					<li class="nav-item mx-0 mx-lg-1 bg-danger">
-					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout</a></li>
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.jsp">Log in</a></li>
+					<li class="nav-item mx-0 mx-lg-1 bg-dark">
+					<a class="nav-link py-3 px-0 px-lg-3 rounded" href="registration.jsp">Sign Up</a></li>
 				</ul>
 			</div>
 		</div>
@@ -81,7 +76,7 @@
 		<div class="container">
 			<!-- Search Section Heading-->
 			<h2
-				class="page-section-heading text-center text-uppercase text-secondary mb-0">Search a Ride</h2>
+				class="page-section-heading text-center text-uppercase text-secondary mb-0">What We offers</h2>
 			<!-- Icon Divider-->
 			<div class="divider-custom">
 				<div class="divider-custom-line"></div>
@@ -95,8 +90,8 @@
 					<img src="assets/img/icon1.png" class=icon>
 				</div>
 				<div class="col-md-8 col-lg-6 mb-5">
-					<h3>For any budget</h3>
-					<p>From bikes and cars, you can find a ride in your budget at your convenience any time./p>
+					<h3>Flexible Options:</h3>
+					<p>We provide flexible arrangements, allowing participants to choose their schedules, find compatible travel companions, and adjust routes according to their needs./p>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -104,32 +99,17 @@
 					<img src="assets/img/icon2.png" class=icon>
 				</div>
 				<div class="col-md-8 col-lg-6 mb-5">
-					<h3>For any distance</h3>
-					<p>Book rides within the city, outside a city any time</p>
+					<h3>Community Connection</h3>
+					<p> Meet new people, build connections, and make each trip an opportunity for shared experiences.</p>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="page-section">
-		<div class="container">
-			<!-- Offer Section Heading-->
-			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Offer a Ride</h2>
-			<!-- Icon Divider-->
-			<div class="divider-custom">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon">
-					<i class="fas fa-star"></i>
-				</div>
-				<div class="divider-custom-line"></div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-4 col-lg-2 mb-5">
 					<img src="assets/img/icon3.jpeg" class=icon>
 				</div>
 				<div class="col-md-8 col-lg-6 mb-5">
-					<h3>Reduce the Cost</h3>
-					<p>You can reduce the expense of a journey by offering a ride to another./p>
+					<h3>Cost Savings</h3>
+					<p>Save money on fuel and maintenance costs by sharing travel expenses./p>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -137,8 +117,8 @@
 					<img src="assets/img/icon4.jpg" class=icon>
 				</div>
 				<div class="col-md-8 col-lg-6 mb-5">
-					<h3>Reduce Pollution</h3>
-					<p>By sharing, you can help to reduce the pollution by the vehicles.</p>
+					<h3>Eco-Friendly Travel</h3>
+					<p>By sharing rides, you contribute to a greener planet, reducing your carbon footprint with every trip.</p>
 				</div>
 			</div>
 		</div>
@@ -256,16 +236,11 @@
 		<div class="container">
 			<div class="row">
 				<!-- Footer Location-->
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Location</h4>
-					<p class="lead mb-0">
-						2215 John Daniel Drive <br /> Clark, MO 65243
-					</p>
-				</div>
-				<!-- Footer Social Icons-->
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Around the Web</h4>
-					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+				<div class="col-lg-6 mb-5 mb-lg-0">
+					<h4 class="text-uppercase mb-4">CommuniDrive </h4>
+					<div class="mb-5 mb-lg-0">
+						<h6 class="text-uppercase mb-4">Connect With Us</h6>
+						<a class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-facebook-f"></i></a> <a
 						class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-twitter"></i></a> <a
@@ -273,14 +248,16 @@
 						class="fab fa-fw fa-linkedin-in"></i></a> <a
 						class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-dribbble"></i></a>
+					</div>
 				</div>
-				<!-- Footer About Text-->
-				<div class="col-lg-4">
-					<h4 class="text-uppercase mb-4">About Freelancer</h4>
-					<p class="lead mb-0">
-						Freelance is a free to use, MIT licensed Bootstrap theme created
-						by <a href="http://startbootstrap.com">Start Bootstrap</a> .
-					</p>
+				<div class="col-lg-6">
+					<ul class="footer-list">
+    					<li><a href="#about">About Us</a></li>
+    					<li><a href="#contact">Contact Us</a></li>
+    					<li><a href="login.jsp">Search A Ride</a></li>
+    					<li><a href="login.jsp">Offer A Ride</a></li>
+					</ul>
+
 				</div>
 			</div>
 		</div>
@@ -288,287 +265,15 @@
 	<!-- Copyright Section-->
 	<div class="copyright py-4 text-center text-white">
 		<div class="container">
-			<small>Copyright &copy; Your Website 2021</small>
+			<small>Copyright &copy; CommuniDrive</small>
 		</div>
 	</div>
-	<!-- Portfolio Modals-->
-	<!-- Portfolio Modal 1-->
-	<div class="portfolio-modal modal fade" id="portfolioModal1"
-		tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Log
-									Cabin</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cabin.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 2-->
-	<div class="portfolio-modal modal fade" id="portfolioModal2"
-		tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty
-									Cake</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cake.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 3-->
-	<div class="portfolio-modal modal fade" id="portfolioModal3"
-		tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus
-									Tent</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/circus.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 4-->
-	<div class="portfolio-modal modal fade" id="portfolioModal4"
-		tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/game.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 5-->
-	<div class="portfolio-modal modal fade" id="portfolioModal5"
-		tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked
-									Safe</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/safe.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Portfolio Modal 6-->
-	<div class="portfolio-modal modal fade" id="portfolioModal6"
-		tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-		<div class="modal-dialog modal-xl">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<button class="btn-close" type="button" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body text-center pb-5">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<!-- Portfolio Modal - Title-->
-								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-								<!-- Icon Divider-->
-								<div class="divider-custom">
-									<div class="divider-custom-line"></div>
-									<div class="divider-custom-icon">
-										<i class="fas fa-star"></i>
-									</div>
-									<div class="divider-custom-line"></div>
-								</div>
-								<!-- Portfolio Modal - Image-->
-								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/submarine.png" alt="..." />
-								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	<!-- Bootstrap core JS-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<!-- * *                               SB Forms JS                               * *-->
-	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>

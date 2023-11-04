@@ -22,7 +22,7 @@
 		<!-- Sign in  Form -->
 		<section class="sign-in">
 			<div class="container m-5 d-flex align-items-center flex-column">
-				<h1 class="masthead-heading text-uppercase mb-0">Welcome To CommuniDrive</h1>
+				<h1 class="masthead-heading text-uppercase mb-0 ">Welcome To CommuniDrive</h1>
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
