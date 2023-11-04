@@ -6,7 +6,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Car Pool</title>
+<title>CommuniDrive</title>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
@@ -224,7 +224,7 @@
 								message!</div>
 						</div>
 						<!-- Submit Button-->
-						<button class="btn btn-primary btn-xl disabled" id="submitButton"
+						<button class="btn btn-primary btn-xl" id="submitButton"
 							type="submit">Send</button>
 					</form>
 				</div>
@@ -254,8 +254,8 @@
 					<ul class="footer-list">
     					<li><a href="#about">About Us</a></li>
     					<li><a href="#contact">Contact Us</a></li>
-    					<li><a href="login.jsp">Search A Ride</a></li>
-    					<li><a href="login.jsp">Offer A Ride</a></li>
+    					<li><a href="search.jsp">Search A Ride</a></li>
+    					<li><a href="offer.jsp">Offer A Ride</a></li>
 					</ul>
 
 				</div>
